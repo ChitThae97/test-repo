@@ -13,13 +13,41 @@ public class User implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 
+	private String phone;
+	private int age;
 	
 	public User(String name) {
 		super();
 		this.name = name;
 	}
 
+	
 	private String name;
+	
+	
+
+	public User(String phone, int age, String name) {
+		super();
+		this.phone = phone;
+		this.age = age;
+		this.name = name;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	public Integer getId() {
 		return id;
